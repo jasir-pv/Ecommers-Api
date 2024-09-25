@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv"
 import bodyParser from "body-parser";
 import userRoute from "./routes/user.js"
+import authRoute from "./routes/auth.js"
 
 
 
@@ -25,8 +26,9 @@ const connectDB = async () => {
 connectDB();
 
 
-
+app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
+
 
 
 
