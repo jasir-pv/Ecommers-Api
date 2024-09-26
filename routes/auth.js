@@ -2,6 +2,7 @@ import express, { Router } from "express"
 import User from "../models/User.js"
 import CryptoJS from "crypto-js"
 import jwt from "jsonwebtoken"
+import verifyToken from "./verifyToken.js"
 
 
 const router = Router()
@@ -61,6 +62,9 @@ router.post("/register",async (req,res)=>{
         }
 
     })
+
+
+
 
 
 export default router;
