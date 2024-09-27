@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import bodyParser from "body-parser";
 import userRoute from "./routes/user.js"
 import authRoute from "./routes/auth.js"
+import productRoute from "./routes/product.js"
 
 
 
@@ -28,6 +29,7 @@ connectDB();
 
 app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
+app.use("/api/products", productRoute)
 
 
 
